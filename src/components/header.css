@@ -1,0 +1,30 @@
+.custom-header-container {
+    width: 100%;
+}
+
+.custom-navbar {
+    background-color: #2eaf7d !important;
+}
+
+.custom-header-container .navbar {
+    padding: 1rem;
+}
+
+.custom-header-container .navbar-toggler {
+    margin-right: 0.5rem;
+}
+
+.custom-header-container .navbar-nav {
+    margin-left: auto;
+}
+
+.custom-header-container .navbar-nav .nav-link {
+    margin-right: 1rem;
+}
+
+.custom-header-container .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+}

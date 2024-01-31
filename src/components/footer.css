@@ -1,0 +1,28 @@
+.footer {
+    background-color: #2eaf7d !important;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 20px 0;
+}
+
+.footer p {
+    color: black;
+
+}
+
+/* .footer-typewriter-container {
+    font-size: 14px;
+  
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid rgb(255, 255, 255);
+    min-height: 1em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-typewriter-container .Typewriter {
+    font-size: 14px !important;
+  
+} */

@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+/* Global Styles */
+body {
+  background-color: hsl(177, 61%, 53%);
+  color: #449342;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header Styles */
+.header {
+  background-color: #02353C;
+  color: #fff;
+  /* Text color for the header */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navigation Styles */
+.navbar {
+  background-color: #02353C;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link {
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+/* Accent Color for Buttons or Interactive Elements */
+.button {
+  background-color: #2EAF7D;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Secondary Accent Color */
+.secondary-button {
+  background-color: #C1F6ED;
+  color: #fff;
 }
+
+/* Text Content */
+.text-content {
+  color: #449342;
+}
+
+/* Other styles as needed */
