@@ -10,7 +10,7 @@ app.use(express.json());
 let generatedQuiz = null;
 
 const openai = new OpenAI({
-    apiKey: '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',
+    apiKey: 'API_KEY_HERE',
 });
 
 app.post('/generate-quiz-questions', async (req, res) => {
