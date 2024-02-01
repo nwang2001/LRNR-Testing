@@ -2,10 +2,10 @@ import React from 'react';
 
 // Create QuizContext with default values
 const QuizContext = React.createContext({
-  topic: 'GoLang',
-  expertise: 'Novice',
-  numQuestions: '5',
-  questionStyle: 'normal',
+  topic: '',
+  expertise: '',
+  numQuestions: '',
+  questionStyle: '',
   isFormSubmitted: false,
 });
 

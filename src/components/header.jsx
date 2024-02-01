@@ -2,9 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import Home from '../pages/Home';
+import Home from '../pages/Home.jsx';
 import Test from '../pages/Test'
-import Account from '../pages/Account';
+import Account from '../pages/Account.jsx';
 import QuizGenerator from '../backend/components/QuizGenerator';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.css';
