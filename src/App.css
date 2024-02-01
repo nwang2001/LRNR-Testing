@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  background-color: hsl(177, 61%, 53%);
+  /* background-color: hsl(177, 61%, 53%); */
   color: #449342;
 }
 
@@ -33,8 +33,8 @@ body {
 }
 
 /* Text Content */
-.text-content {
+/* .text-content {
   color: #449342;
-}
+} */
 
 /* Other styles as needed */

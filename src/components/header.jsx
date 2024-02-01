@@ -2,11 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-
 import Home from '../pages/home';
-import Test from '../pages/Test'
-import Account from '../pages/account';
-
+import Quiz from '../pages/Quiz';
+import Account from '../pages/Account';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.css';
 
@@ -15,7 +13,7 @@ const Header = () => {
         <Router>
             <div className="custom-header-container">
                 <Navbar className="custom-navbar" expand="lg">
-                    <Navbar.Brand as={Link} to="/">LRNR (logo?)</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/"><img src="/turt.png" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarNav" />
                     <Navbar.Collapse id="navbarNav">
                         <Nav className="mr-auto">
