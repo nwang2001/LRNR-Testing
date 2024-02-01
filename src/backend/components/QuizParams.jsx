@@ -28,12 +28,13 @@ function QuizParams() {
   const handleSubmit = (event) => {
     event.preventDefault();
     quizContext.setIsFormSubmitted(!quizContext.isFormSubmitted);
+    console.log(quizContext.isFormSubmitted);
   };
   const {topic, expertise, numQuestions, questionStyle, isFormSubmitted} = useContext(QuizContext);   
 
   useEffect(() => {
       if (topic && expertise && numQuestions && questionStyle){
-          axios.post('http://localhost:5000/generate-quiz-questions', { topic, expertise, numQuestions, questionStyle })
+          axios.post('http://localhost:5000/generated-questions', { topic, expertise, numQuestions, questionStyle })
               .then(response => {
                 console.log(response.data);
               })

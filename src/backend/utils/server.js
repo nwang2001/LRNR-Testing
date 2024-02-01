@@ -21,6 +21,7 @@ app.post('/generate-quiz-questions', async (req, res) => {
         Your responce should only include the questions (No introduction needed), and questions must be open ended. Let's get started; The topic of this quiz is ${topic}, set at ${expertise} level. This quiz will consist of ${numQuestions} questions and should be presented in a ${questionStyle} style of speaking.` }],
         model: "gpt-3.5-turbo",
     });
+    console.log('Form submitted');
 
     // Send the generated questions to the /generated-questions route
     generatedQuiz = completion.choices[0].message.content.split('\n').filter((question) => question !== "");
