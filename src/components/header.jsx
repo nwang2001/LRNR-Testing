@@ -5,6 +5,7 @@ import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Home from '../pages/Home';
 import Test from '../pages/Test'
 import Account from '../pages/Account';
+import QuizGenerator from '../backend/components/QuizGenerator';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.css';
 
@@ -29,6 +30,7 @@ const Header = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/quiz" element={<Test />} />
                     <Route path="/account" element={<Account />} />
+                    <Route path="/quiz-gen" element={<QuizGenerator />} />
                 </Routes>
             </div>
         </Router>
