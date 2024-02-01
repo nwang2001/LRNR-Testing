@@ -15,14 +15,12 @@ const Header = () => {
             <div className="custom-header-container">
                 <Navbar className="custom-navbar" expand="lg">
                     <Navbar.Brand as={Link} to="/"><img src="/turt.png" /></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="navbarNav" />
-                    <Navbar.Collapse id="navbarNav">
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <NavDropdown title={<span className="navbar-toggler-icon"></span>} id="basic-nav-dropdown" align="end">
-                                <NavDropdown.Item as={Link} to="/">Home</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/quiz">Quiz</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/account">Account</NavDropdown.Item>
-                            </NavDropdown>
+                            <Nav.Link as={Link} to="/">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/quiz">Quiz</Nav.Link>
+                            <Nav.Link as={Link} to="/account">Account</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
