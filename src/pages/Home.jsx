@@ -7,6 +7,9 @@ import './home.css';
 const Home = () => {
     return (
         <div className="home-container">
+            <div className="image-container">
+                <img src="/lrnr-logo.png" alt="Image" />
+            </div>
             <div className="left-container">
                 <div className="typewriter-container">
                     <Typewriter
@@ -20,9 +23,6 @@ const Home = () => {
                 <div className="button-container">
                     <Link to="/quiz" className="button">Go to Quiz</Link>
                 </div>
-            </div>
-            <div className="image-container">
-                <img src="/lrnr-logo.png" alt="Image" />
             </div>
 
             <div class="cards">

@@ -3,10 +3,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import Home from '../pages/home';
-import Quiz from '../pages/Quiz';
+import Test from '../pages/Test'
 import Account from '../pages/Account';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Header.css';
+import './header.css';
 
 const Header = () => {
     return (

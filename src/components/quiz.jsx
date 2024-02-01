@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Quiz.css';
+import './quiz.css';
 
 const QuizForm = () => {
     return (
