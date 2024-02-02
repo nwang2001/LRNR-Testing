@@ -24,3 +24,6 @@ yarn-error.log*
 
 # .env
 .env
+
+#server.js (Must input personal API key)
+/src/backend/utils/server.js

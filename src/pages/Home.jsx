@@ -7,21 +7,24 @@ import './home.css';
 const Home = () => {
     return (
         <div className="home-container">
-            <div className="image-container">
-                <img src="/turt.png" alt="Image" />
-            </div>
-            <div className="left-container">
-                <div className="typewriter-container">
-                    <Typewriter
-                        options={{
-                            strings: ['HOLY', 'GUAC', 'BRO', 'WOW'],
-                            autoStart: true,
-                            loop: true,
-                        }}
-                    />
+            <div className="top-container">
+                <div className="left-container">
+                    <p className="typewriter-container">
+                        Your guided path to programming enlightenment. Become proficient in{' '}
+                        <Typewriter
+                            options={{
+                                strings: ['JavaScript', 'Python', 'Java', 'C#', 'Ruby'],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
+                    </p>
+                    <div className="button-container">
+                        <Link to="/quiz" className="button">Go to Quiz</Link>
+                    </div>
                 </div>
-                <div className="button-container">
-                    <Link to="/quiz" className="button">Go to Quiz</Link>
+                <div className="image-container">
+                    <img src="/turt.png" alt="Image" />
                 </div>
             </div>
 
@@ -37,15 +40,11 @@ const Home = () => {
                 </div>
                 <div className="flip">
                     <div className="front" src="background-image: url(https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb)">
-                        <h1>Personal SME
-
-                        </h1>
+                        <h1>Personal SME</h1>
                     </div>
                     <div className="back">
                         <h2>Personal SME</h2>
-                        <p>Welcome to the path of knowledge. Our app is like having a personal subject matter expert at your side, guiding you on your journey towards wisdom
-
-                        </p>
+                        <p>Welcome to the path of knowledge. Our app is like having a personal subject matter expert at your side, guiding you on your journey towards wisdom</p>
                     </div>
                 </div>
                 <div className="flip">
@@ -54,7 +53,7 @@ const Home = () => {
                     </div>
                     <div className="back">
                         <h2>Personalized Quizzes</h2>
-                        <p>Good tools make application development quicker and easier to maintain than if you did everything by hand..</p>
+                        <p>Good tools make application development quicker and easier to maintain than if you did everything by hand.</p>
                     </div>
                 </div>
             </div>
