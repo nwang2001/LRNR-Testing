@@ -5,14 +5,17 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-left col-md-4 col-sm-6">
-                <h2>
-                    {" "}
-                    LRNR<span> logo</span>
-                </h2>
+                <div className='footer-logo'>
+                <img src='/turt.png' alt='logo' />
+                    <h2>
+                        {" "}
+                        <span> LRNR</span>
+                    </h2>
+                </div>
                 <p className="menu">
                     <a href="/"> Home</a> | <a href="/quiz"> Quiz</a> | <a href="/account"> Account</a>
                 </p>
-                <p className="name"> Company Name © 2024</p>
+                <p className="name"> LRNR © 2024</p>
             </div>
             <div className="footer-center col-md-4 col-sm-6">
                 <div>
