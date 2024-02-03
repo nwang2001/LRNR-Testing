@@ -4,11 +4,14 @@
     text-align: left;
     font-family: inherit;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     padding: 50px;
     margin-top: 50px;
 }
 
+.footer img {
+    width: 20%;
+}
 
 .footer .footer-left,
 .footer .footer-center,
@@ -22,29 +25,26 @@
     padding-right: 15px;
 }
 
-
 .footer .about {
     line-height: 20px;
     color: #F3FFE9;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: normal;
-    margin: 0;
+    margin: 3% 0;
 }
-
 
 .footer .about span {
     display: block;
     color: #F3FFE9;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-
 .footer .footer-center {
+    margin: 3% 0;
     width: 30%;
 }
-
 
 .footer .footer-center i {
     background-color: #33383b;
@@ -59,14 +59,12 @@
     vertical-align: middle;
 }
 
-
 .footer-center p {
     display: inline-block;
     color: #F3FFE9;
     vertical-align: middle;
     margin: 0;
 }
-
 
 .footer-center .email {
     display: inline-block;
@@ -75,25 +73,21 @@
     margin: 0;
 }
 
-
 .footer .footer-center p span {
     display: block;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 2;
 }
-
 
 .footer .footer-center p a {
     color: #82dd38;
     text-decoration: none;
 }
 
-
 .footer .footer-right {
     width: 35%;
 }
-
 
 .footer h2 {
     color: #F3FFE9;
@@ -102,18 +96,15 @@
     margin: 0;
 }
 
-
 .footer h2 span {
     color: #82dd38;
 }
-
 
 .footer .menu {
     color: #F3FFE9;
     margin: 20px 0 12px;
     padding: 0;
 }
-
 
 .footer .menu a {
     display: inline-block;
@@ -122,11 +113,9 @@
     color: inherit;
 }
 
-
 .footer .menu a:hover {
     color: #b2f27e;
 }
-
 
 .footer .name {
     color: #82dd38;
@@ -135,12 +124,10 @@
     margin: 0;
 }
 
-
 @media (max-width: 767px) {
     .footer {
-        font-size: 14px;
+        font-size: 16px;
     }
-
 
     .footer .footer-left,
     .footer .footer-center,
@@ -150,7 +137,6 @@
         margin-bottom: 40px;
         text-align: center;
     }
-
 
     .footer .footer-center i {
         margin-left: 0;
