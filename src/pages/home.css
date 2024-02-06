@@ -1,16 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-
 * {
     box-sizing: border-box;
     font-weight: normal;
 }
 
 body {
-    /* color: #555; */
-    /* background: #222; */
     text-align: center;
     font-family: 'Roboto Mono';
-    /* padding: 1em; */
 }
 
 .home-container {
@@ -20,30 +15,40 @@ body {
     padding: 20px;
 }
 
+.top-container {
+    display: flex;
+    width: 100%;
+}
+
 .left-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    width: 50%;
+    position: relative;
+    font-family: 'Roboto Mono';
 }
 
 .typewriter-container {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1em;
     overflow: hidden;
-    border-right: 0.15em solid rgb(0, 123, 255);
-    white-space: nowrap;
-    font-size: 4em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    white-space: normal;
+    font-size: 3em;
+    font-family: 'Roboto Mono';
     min-height: 100px;
     margin-bottom: 20px;
+    max-width: 100%;
 }
 
-.image-container img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 20px;
+.button-container {
+    position: absolute;
+    bottom: 3em;
+    margin: 1em 0;
 }
 
 .button-container .button {
@@ -58,6 +63,19 @@ body {
 
 .button-container .button:hover {
     background-color: #021B33;
+}
+
+.image-container {
+    width: 50%;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 .front h1 {
@@ -77,7 +95,6 @@ body {
     margin: 0 auto;
     padding: 25px;
     list-style: none;
-
 }
 
 .flip {
@@ -87,7 +104,7 @@ body {
     >.back {
         display: block;
         transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
-        transition-duration: .5s;
+        transition-duration: 1s;
         transition-property: transform, opacity;
     }
 
@@ -158,3 +175,41 @@ body {
         }
     }
 }
+
+/* @media screen and (max-width: 599px) {
+    .typewriter-container {
+        font-size: 1em;
+    }
+
+    .button-container {
+        bottom: 1em;
+        height: 1em;
+    }
+
+    .flip {
+        >.front, >.back {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 850px) {
+    .typewriter-container {
+    }
+
+    .button-container {
+    }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1230px) {
+    .typewriter-container {}
+
+    .button-container {}
+}
+
+@media screen and (min-width: 1231px) and (max-width: 1500px) {
+    .typewriter-container {}
+
+    .button-container {}
+} */

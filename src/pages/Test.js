@@ -6,7 +6,7 @@ import QuizContext from '../backend/context.js/QuizContext'
 export default function Quiz() {
     // Define state variables for topic, expertise, numQuestions, and questionStyle
 
-    const [topic, setTopic] = useState('HTML');
+    const [topic, setTopic] = useState('GoLang');
     const [expertise, setExpertise] = useState('Novice');
     const [numQuestions, setNumQuestions] = useState('5');
     const [questionStyle, setQuestionStyle] = useState('normal');

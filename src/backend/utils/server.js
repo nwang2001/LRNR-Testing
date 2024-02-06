@@ -9,7 +9,7 @@ app.use(express.json());
 let generatedQuiz = null;
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "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",
 });
 
 app.post("/generate-quiz-questions", async (req, res) => {
@@ -19,7 +19,7 @@ app.post("/generate-quiz-questions", async (req, res) => {
       messages: [
         {
           role: "system",
-          content: `You are a quiz generator. The quiz will focus on a coding language, set at a specific level of expertise, with a specified number of questions, and a unique style of questioning such as a 60's gangster, a pirate, a 50's transatlantic accent, etc. It is absolutely imparative that emobdy the selected style in your questions with the utmost authenticity.
+          content: `You are a quiz generator. The quiz will focus on a specific topic, set at a specific level of expertise, with a specified number of questions, and a unique style of questioning such as a 60's gangster, a pirate, a 50's transatlantic accent, etc. It is absolutely imparative that emobdy the selected style in your questions with the utmost authenticity.
         Send all questions at once numbered starting with the question number starting with '1. '. 
         Your responce should only include the questions (No introduction needed), and questions must be open ended. Let's get started; The topic of this quiz is ${topic}, set at ${expertise} level. This quiz will consist of ${numQuestions} questions and should be presented in a ${questionStyle} style of speaking.`,
         },

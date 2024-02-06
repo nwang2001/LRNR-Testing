@@ -8,6 +8,7 @@ import Account from '../pages/Account.jsx';
 import QuizGenerator from '../backend/components/QuizGenerator';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.css';
+import Result from '../pages/Result.jsx';
 
 const Header = () => {
     return (
@@ -21,6 +22,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
                             <Nav.Link as={Link} to="/quiz">Quiz</Nav.Link>
                             <Nav.Link as={Link} to="/account">Account</Nav.Link>
+                            <Nav.Link as={Link} to="/result">Result</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
@@ -29,6 +31,7 @@ const Header = () => {
                     <Route path="/quiz" element={<Test />} />
                     <Route path="/account" element={<Account />} />
                     <Route path="/quiz-gen" element={<QuizGenerator />} />
+                    <Route path="/result" element={<Result />} />
                 </Routes>
             </div>
         </Router>
