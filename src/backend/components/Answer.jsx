@@ -1,24 +1,41 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import OpenAI from "openai";
 
-export default function Answer() {
+export default function Answer({ onAnswerSubmitted }) {
   const [answer, setAnswer] = useState("");
   const [response, setResponse] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const navigate = useNavigate();
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
     // Fetch questions from the backend
     fetchQuestions();
   }, []);
 
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    setAnswer("");
+    setResponse("");
+  }, [currentQuestionIndex]);
+
+  useEffect(() => {
+    setCurrentQuestionIndex(0);
+  }, [questions]);
+
   const fetchQuestions = async () => {
-    // pull questions from the backend
+    // Pull questions from the backend
     try {
       const response = await fetch("http://localhost:5000/generated-questions");
       const data = await response.json();
-      setQuestions(data.generatedQuiz); //This is the array of questions
+      setQuestions(data.generatedQuiz); // This is the array of questions
     } catch (error) {
       console.error("Error fetching questions:", error);
     }
@@ -45,7 +62,7 @@ export default function Answer() {
         messages: [
           {
             role: "system",
-            content: `You are an answer generator that is answering questions for a quiz that will focus on a coding language. The current question is: "${question}". Take the user's answer "${answer}" and generate  a response to whether the user answered the question correctly or not.`,
+            content: `You are an answer generator that is answering questions for a quiz that will focus on a coding language. The current question is: "${question}". Take the user's answer "${answer}" and generate a response to whether the user answered the question correctly or not. Give a percentage on how accurately the user answered the question`,
           },
         ],
         model: "gpt-3.5-turbo",
@@ -54,14 +71,25 @@ export default function Answer() {
       const data = completion.choices[0].message.content;
       console.log(data);
       setResponse(data);
-
-      // Move to the next question in the array
-      setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
     setIsLoading(false); // Set loading to false after the response is received
+    onAnswerSubmitted(); // Notify the parent component that the answer has been submitted
   }
+
+  const goToResultsPage = () => {
+    navigate("/results");
+  };
+
+  const showNextQuestionButton = !isLoading && response;
+  const showViewResultsButton = currentQuestionIndex === questions.length - 1;
+
+  const getNextQuestion = () => {
+    setAnswer("");
+    setResponse("");
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+  };
 
   return (
     <div>
@@ -74,10 +102,16 @@ export default function Answer() {
       />
       <button onClick={userAnswer}>Submit</button>
       {isLoading && <p>Loading...</p>}
-      {!isLoading && response && (
+      {response && (
         <div>
           <h2>Response</h2>
           <p>{response}</p>
+          {showNextQuestionButton && !showViewResultsButton && (
+            <button onClick={getNextQuestion}>Next Question</button>
+          )}
+          {showViewResultsButton && (
+            <button onClick={goToResultsPage}>View Results</button>
+          )}
         </div>
       )}
     </div>

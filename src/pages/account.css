@@ -60,7 +60,7 @@ body {
     white-space: nowrap;
     margin: 0;
     letter-spacing: 2px;
-    animation: typewriter 2s steps(25) infinite;
+    animation: typewriter 2s steps(18) infinite;
 }
 
 @keyframes typewriter {

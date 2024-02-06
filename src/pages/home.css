@@ -30,10 +30,15 @@ body {
 }
 
 .typewriter-container {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1em;
     overflow: hidden;
     white-space: normal;
-    font-size: 4em;
+    font-size: 3em;
     font-family: 'Roboto Mono';
     min-height: 100px;
     margin-bottom: 20px;
@@ -42,8 +47,8 @@ body {
 
 .button-container {
     position: absolute;
-    bottom: 0;
-    margin-bottom: 100px;
+    bottom: 3em;
+    margin: 1em 0;
 }
 
 .button-container .button {
@@ -170,3 +175,41 @@ body {
         }
     }
 }
+
+/* @media screen and (max-width: 599px) {
+    .typewriter-container {
+        font-size: 1em;
+    }
+
+    .button-container {
+        bottom: 1em;
+        height: 1em;
+    }
+
+    .flip {
+        >.front, >.back {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 850px) {
+    .typewriter-container {
+    }
+
+    .button-container {
+    }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1230px) {
+    .typewriter-container {}
+
+    .button-container {}
+}
+
+@media screen and (min-width: 1231px) and (max-width: 1500px) {
+    .typewriter-container {}
+
+    .button-container {}
+} */

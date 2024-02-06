@@ -4,6 +4,7 @@ import Answer from "./Answer";
 const QuizGenerator = () => {
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,12 +25,12 @@ const QuizGenerator = () => {
   const handleNextQuestion = () => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex((prevIndex) => prevIndex + 1);
+      setIsAnswerSubmitted(false); // Reset the answer submission state
     }
   };
-  const handlePrevQuestion = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
+
+  const handleAnswerSubmission = () => {
+    setIsAnswerSubmitted(true);
   };
 
   return (
@@ -40,9 +41,10 @@ const QuizGenerator = () => {
             Question {currentIndex + 1} out of {questions.length}
           </h2>
           <p>{questions[currentIndex]}</p>
-          <button onClick={handlePrevQuestion}>Previous Question</button>
-          <button onClick={handleNextQuestion}>Next Question</button>
-          <Answer />
+          <Answer onAnswerSubmitted={handleAnswerSubmission} />
+          {isAnswerSubmitted && (
+            <button onClick={handleNextQuestion}>Next Question</button>
+          )}
         </div>
       )}
     </div>
