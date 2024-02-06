@@ -4,7 +4,7 @@ import './quiz.css';
 
 const QuizForm = () => {
     return (
-        <div className='container mt-5'>
+        <div className='container mt-5 quiz'>
             <h2>Quiz Generation Options</h2>
             <h3>Please choose preferences:</h3>
             <form>

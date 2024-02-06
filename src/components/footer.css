@@ -3,10 +3,12 @@
     width: 100%;
     text-align: left;
     font-family: inherit;
-    font-weight: bold;
     font-size: 18px;
     padding: 50px;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer img {

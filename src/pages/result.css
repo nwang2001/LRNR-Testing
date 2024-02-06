@@ -1,0 +1,27 @@
+.result .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.result .page {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.result .result {
+    margin-top: 20px;
+}
+
+.result p {
+    font-size: 18px;
+}
