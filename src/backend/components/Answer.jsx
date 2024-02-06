@@ -37,7 +37,7 @@ export default function Answer() {
     setIsLoading(true);
     try {
       const openai = new OpenAI({
-        apiKey: "apikey",
+        apiKey: "API Key Here",
         dangerouslyAllowBrowser: true,
       });
 
