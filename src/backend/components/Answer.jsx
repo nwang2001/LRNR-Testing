@@ -62,7 +62,7 @@ export default function Answer({ onAnswerSubmitted }) {
         messages: [
           {
             role: "system",
-            content: `You are an answer generator that is answering questions for a quiz that will focus on a coding language. The current question is: "${question}". Take the user's answer "${answer}" and generate a response to whether the user answered the question correctly or not. Give a percentage on how accurately the user answered the question`,
+            content: `You are an answer generator that is answering questions for a quiz that will focus on a coding language. The current question is: "${question}". Take the user's answer "${answer}" and generate a response to whether the user answered the question correctly or not. Give a percentage on how accurately the user answered the question and explain why the user's answer was that percent accurate.`,
           },
         ],
         model: "gpt-3.5-turbo",
