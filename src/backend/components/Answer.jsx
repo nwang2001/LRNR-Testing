@@ -3,15 +3,20 @@ import { useNavigate } from "react-router-dom";
 import OpenAI from "openai";
 import QuizContext from "../context.js/QuizContext";
 
-export default function Answer({ onAnswerSubmitted, questionIndex, resetLocalResponse }) {
+export default function Answer({
+  onAnswerSubmitted,
+  questionIndex,
+  resetLocalResponse,
+}) {
   // const [response, setResponse] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [questions, setQuestions] = useState([]);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(questionIndex);
+  const [currentQuestionIndex, setCurrentQuestionIndex] =
+    useState(questionIndex);
   const navigate = useNavigate();
   const isFirstRender = useRef(true);
-  const [localAnswer, setLocalAnswer] = useState(''); // Local state for answer
-  const [localResponse, setLocalResponse] = useState('');
+  const [localAnswer, setLocalAnswer] = useState(""); // Local state for answer
+  const [localResponse, setLocalResponse] = useState("");
 
   useEffect(() => {
     // Fetch questions from the backend
@@ -58,7 +63,9 @@ export default function Answer({ onAnswerSubmitted, questionIndex, resetLocalRes
     setIsLoading(true);
     try {
       const openai = new OpenAI({
-        apiKey: "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",
+
+        apiKey: "API_KEY_HERE",
+
         dangerouslyAllowBrowser: true,
       });
 
@@ -83,13 +90,12 @@ export default function Answer({ onAnswerSubmitted, questionIndex, resetLocalRes
   }
 
   const goToResultsPage = () => {
-    navigate("/results");
+    navigate("/result");
   };
   // Function to update the answer state using setAnswer from context
   const updateAnswer = (newValue) => {
     setLocalAnswer(newValue); // Update local answer state
     fetchData(questions[currentQuestionIndex]); // Then fetch data
-
   };
 
   const showNextQuestionButton = !isLoading && localResponse;
