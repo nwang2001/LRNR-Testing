@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext, useReducer} from "react";
 import Answer from "./Answer";
+import QuizContext from "../context.js/QuizContext";
+
+
+
 
 const QuizGenerator = () => {
   const [questions, setQuestions] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false);
+  const quizContext = useContext(QuizContext);
+  const [state, dispatch] = useReducer(reducer, {questionIndex: 0,});
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,12 +28,17 @@ const QuizGenerator = () => {
     fetchData();
   }, []);
 
+  
+ 
   const handleNextQuestion = () => {
-    if (currentIndex < questions.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
+    if (state.questionIndex < questions.length - 1) {
+      dispatch({ type: 'INCREMENT' });
+      // quizContext.setAnswer(""); // Reset the answer state
+      // quizContext.setResponse(""); // Reset the response state
       setIsAnswerSubmitted(false); // Reset the answer submission state
     }
   };
+
 
   const handleAnswerSubmission = () => {
     setIsAnswerSubmitted(true);
@@ -38,10 +49,12 @@ const QuizGenerator = () => {
       {questions.length > 0 && (
         <div>
           <h2>
-            Question {currentIndex + 1} out of {questions.length}
+            Question {state.questionIndex + 1} out of {questions.length}
           </h2>
-          <p>{questions[currentIndex]}</p>
-          <Answer onAnswerSubmitted={handleAnswerSubmission} />
+          <p>{questions[state.questionIndex]}</p>
+          {/* <button onClick={handleNextQuestion}>Next Question</button> */}
+
+          <Answer onAnswerSubmitted={handleAnswerSubmission} questionIndex={state.questionIndex} />
           {isAnswerSubmitted && (
             <button onClick={handleNextQuestion}>Next Question</button>
           )}
@@ -49,6 +62,18 @@ const QuizGenerator = () => {
       )}
     </div>
   );
+};
+
+const reducer = (state, action) => {
+  
+  switch (action.type) {
+    case 'INCREMENT':
+      return { ...state, questionIndex: state.questionIndex + 1 };
+    case 'RESET':
+      return { ...state, questionIndex: 0 };
+    default:
+      return state;
+  }
 };
 
 export default QuizGenerator;
