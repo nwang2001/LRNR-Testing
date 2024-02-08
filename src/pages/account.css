@@ -99,12 +99,14 @@ body {
     font-size: 1.5em;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px){
     .box-container {
         display: flex;
         flex-direction: column;
     }
+}
 
+@media screen and (max-width: 768px) {
     .box {
         flex: 1 0 100%;
         margin-right: 0;

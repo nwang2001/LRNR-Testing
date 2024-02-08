@@ -58,7 +58,7 @@ export default function Answer({ onAnswerSubmitted, questionIndex, resetLocalRes
     setIsLoading(true);
     try {
       const openai = new OpenAI({
-        apiKey: "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",
+        apiKey: "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",
         dangerouslyAllowBrowser: true,
       });
 
