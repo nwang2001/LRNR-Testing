@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext, useReducer} from "react";
 import Answer from "./Answer";
 import QuizContext from "../context.js/QuizContext";
+import "./QuizGenerator.css";
 
 
 
@@ -45,12 +46,13 @@ const QuizGenerator = () => {
   };
 
   return (
-    <div>
+    <div className="quiz">
       {questions.length > 0 && (
-        <div>
-          <h2>
+        <div className="container">
+          <div id="quiz-question" className="page">
+          <h1>
             Question {state.questionIndex + 1} out of {questions.length}
-          </h2>
+          </h1>
           <p>{questions[state.questionIndex]}</p>
           {/* <button onClick={handleNextQuestion}>Next Question</button> */}
 
@@ -58,6 +60,7 @@ const QuizGenerator = () => {
           {isAnswerSubmitted && (
             <button onClick={handleNextQuestion}>Next Question</button>
           )}
+        </div>
         </div>
       )}
     </div>
