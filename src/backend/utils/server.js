@@ -4,13 +4,12 @@ const cors = require("cors");
 const app = express();
 const axios = require("axios");
 
-
 app.use(cors());
 app.use(express.json());
 let generatedQuiz = null;
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "API-KEY-HERE",
 });
 
 app.post("/generate-quiz-questions", async (req, res) => {
