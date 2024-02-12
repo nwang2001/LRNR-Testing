@@ -9,7 +9,7 @@ app.use(express.json());
 let generatedQuiz = null;
 
 const openai = new OpenAI({
-  apiKey: "API-KEY-HERE",
+  apiKey: "API_KEY_HERE",
 
 });
 
