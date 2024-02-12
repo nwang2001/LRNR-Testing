@@ -43,7 +43,7 @@ Certainly! Here's an updated version of your README with instructions for downlo
 
 ---
 
-#LRNR App
+# LRNR App
 
 LRNR is a cutting-edge application powered by React, Node.js, and the OpenAI API. With LRNR, users can generate custom quizzes using OpenAI's advanced algorithms, providing a unique and interactive learning experience. LRNR harnesses the power of OpenAI to create personalized quizzes tailored to users' preferences. By leveraging OpenAI's capabilities, LRNR not only generates quizzes but also evaluates the accuracy of users' responses, offering valuable feedback to enhance learning outcomes. Stay tuned for updates as we continue to evolve LRNR and provide users with an unparalleled learning platform.
 
