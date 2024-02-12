@@ -3,36 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75vh;
-}
-
-
-.quiz .page {
+    min-height: 100vh; /* Change height to min-height to ensure it expands as needed */
+    overflow-y: auto; /* Add vertical overflow and enable scrolling */
+  }
+  
+  .quiz .page {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.quiz h1 {
+  }
+  
+  .quiz h1 {
     font-size: 24px;
     margin-bottom: 10px;
-}
-
-button {
-    margin-top: 20px;
-
-}   
-
-.quiz .quiz {
-    margin-top: 20px;
-}
-
-.quiz p {
+  }
+  
+  button {
+    margin: 30px 0;
+  }
+  
+  .quiz p {
     font-size: 18px;
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-}
-
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+  

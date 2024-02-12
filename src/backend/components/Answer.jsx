@@ -50,21 +50,12 @@ export default function Answer({
     }
   };
 
-  // const userAnswer = () => {
-  //   // if (answer !== "" && questions.length > 0) {
-  //     // Perform any necessary actions with the user's answer here
-  //     console.log("User's answer:", quanswer);
-  //     fetchData(questions[currentQuestionIndex]);
-  //     console.log(currentQuestionIndex); // Pass the current question to the fetchData function
-  //   // }
-  // };
-
   async function fetchData(question) {
     setIsLoading(true);
     try {
       const openai = new OpenAI({
 
-        apiKey: "API_KEY_HERE",
+        apiKey: "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",
 
         dangerouslyAllowBrowser: true,
       });
@@ -101,21 +92,9 @@ export default function Answer({
   const showNextQuestionButton = !isLoading && localResponse;
   const showViewResultsButton = currentQuestionIndex === questions.length - 1;
 
-  // const getNextQuestion = () => {
-  //   setAnswer("");
-  //   setResponse("");
-  //   setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
-  // };
-
   return (
     <div>
       <h1>Answer</h1>
-      {/* <input
-        type="text"
-        placeholder="Enter your answer"
-        value={answer}
-        onChange={(e) => setAnswer(e.target.value)}
-      /> */}
       <input
         type="text"
         placeholder="Enter your answer"
@@ -128,9 +107,6 @@ export default function Answer({
         <div>
           <h2>Response</h2>
           <p>{localResponse}</p>
-          {/* {showNextQuestionButton && !showViewResultsButton && (
-            <button onClick={getNextQuestion}>Next Question</button>
-          )} */}
           {showViewResultsButton && (
             <button onClick={goToResultsPage}>View Results</button>
           )}
