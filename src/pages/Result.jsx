@@ -8,7 +8,7 @@ export default function Result() {
                 <main>
                     <div id="results-page" className="page">
                         <h1>Quiz Results</h1>
-                        <div className="result">
+                        <div className="results">
                             <p>You've answered O out of X questions correctly!</p>
                         </div>
                     </div>

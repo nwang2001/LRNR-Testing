@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 75vh;
+    background: linear-gradient(60deg, #07643C, #71cba4);
 }
 
 .result .page {
@@ -18,7 +19,7 @@
     margin-bottom: 10px;
 }
 
-.result .result {
+.result .results {
     margin-top: 20px;
 }
 
