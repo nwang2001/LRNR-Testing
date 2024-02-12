@@ -5,9 +5,11 @@
     align-items: center;
     min-height: 100vh; /* Change height to min-height to ensure it expands as needed */
     overflow-y: auto; /* Add vertical overflow and enable scrolling */
+    background: linear-gradient(60deg, #0eb26b, #1e714d);
   }
   
   .quiz .page {
+    background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
@@ -17,10 +19,23 @@
   .quiz h1 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #0c452c;
+  }
+
+  .quiz h2 {
+    margin-top: 2em;
   }
   
   button {
     margin: 30px 0;
+    padding: 10px 20px;
+    background: linear-gradient(60deg, #1e714d, #0eb26b);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
   }
   
   .quiz p {
@@ -28,4 +43,3 @@
     text-align: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   }
-  
