@@ -39,6 +39,29 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+
+## Usage
+
+1. **Accessing the Quiz**: 
+   - After running both servers, visit the home page.
+   - To start a quiz, either click the "Go to quiz" button in the middle of the screen or select the "Quiz" text link in the nav bar.
+
+2. **Setting Quiz Parameters**:
+   - Once redirected to the quiz page, choose parameters such as Topic, Expertise, Number of questions, and Question style.
+   - Click the submit button to proceed.
+
+3. **Taking the Quiz**:
+   - Each question will be presented individually.
+   - Type your answer in the input box provided and submit.
+   - Receive a grade and an explanation for each answer.
+   - Click "Next Question" to move to the subsequent question.
+
+4. **Reviewing Results**:
+   - After answering all questions, a "Results" button will appear.
+   - Click it to access a comprehensive overview of the quiz along with your answers.
+
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
