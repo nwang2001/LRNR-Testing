@@ -56,7 +56,6 @@ export default function Answer({
       const openai = new OpenAI({
 
         apiKey: "API_KEY_HERE",
-
         dangerouslyAllowBrowser: true,
       });
 
@@ -102,9 +101,9 @@ export default function Answer({
         onChange={(e) => setLocalAnswer(e.target.value)} // Update localAnswer
       />
       <button onClick={() => updateAnswer(localAnswer)}>Submit</button>
-      {isLoading && <p>Loading...</p>}
+      {isLoading && <p><img src="../../../load.gif" /></p>}
       {localResponse && (
-        <div>
+        <div className="response-container">
           <h2>Response</h2>
           <p>{localResponse}</p>
           {showViewResultsButton && (

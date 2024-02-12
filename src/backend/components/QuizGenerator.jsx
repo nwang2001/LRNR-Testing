@@ -3,9 +3,6 @@ import Answer from "./Answer";
 import QuizContext from "../context.js/QuizContext";
 import "./QuizGenerator.css";
 
-
-
-
 const QuizGenerator = () => {
   const [questions, setQuestions] = useState([]);
   // const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,8 +26,6 @@ const QuizGenerator = () => {
     fetchData();
   }, []);
 
-  
- 
   const handleNextQuestion = () => {
     if (state.questionIndex < questions.length - 1) {
       dispatch({ type: 'INCREMENT' });
@@ -39,7 +34,6 @@ const QuizGenerator = () => {
       setIsAnswerSubmitted(false); // Reset the answer submission state
     }
   };
-
 
   const handleAnswerSubmission = () => {
     setIsAnswerSubmitted(true);
