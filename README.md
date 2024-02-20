@@ -52,7 +52,7 @@ LRNR is a cutting-edge application powered by React, Node.js, and the OpenAI API
 ### Downloading the Application:
 
 1. **Download the Application Zip**:
-   - Click on [this link](https://github.com/Leran-Johnson/lrnr-app/archive/refs/heads/main.zip) to download the application as a zip file.
+   - Click on [this link](https://github.com/nwang2001/LRNR-Testing/archive/refs/heads/main.zip) to download the application as a zip file.
 
 2. **Extract the Zip File**:
    - Once the download is complete, extract the contents of the zip file to your desired location on your local machine.
@@ -100,7 +100,7 @@ LRNR is a cutting-edge application powered by React, Node.js, and the OpenAI API
    - Navigate to your backend directory in the terminal.
    - Run the following command to start the Express server:
      ```bash
-     node your-backend-file-name.js
+     node server.js
      ```
 
 2. **Start Your Frontend Development Server**:
