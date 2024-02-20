@@ -8,6 +8,7 @@
      ```
     - This will run the tests written for the backend. The quiz generation API function and its error handling will be tested.
 
+### Jest:
 2. **Running the frontend test:**
     - In the Visual Studio terminal run the code:
     ```bash
